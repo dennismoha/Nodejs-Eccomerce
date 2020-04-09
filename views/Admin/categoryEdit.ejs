@@ -1,0 +1,33 @@
+<%- include('../partials/admin/header'); %>
+<%- include('../partials/admin/navbar'); %>
+<%- include('../partials/admin/sidenav'); %>
+
+<%messages.forEach(function(message) {%>
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong><%= message %></strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+    <%})%>  
+    
+  <form action="/category/category/edit/<%=category.id%>" method="post"> 
+    <div class="form-group">
+      <label for="category">Edit category</label>
+      <input type="text" class="form-control" id="category" aria-describedby="categoryHelp" name = "name" value="<%=category.name %>">
+      <small id="emailHelp" class="form-text text-muted">Edit category</small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+      </div>
+    </main>
+  </div>
+</div>
+
+        <script src="/js/dashboard.js"></script></body>
+        <%- include('../partials/admin/footer'); %>
+

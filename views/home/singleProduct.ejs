@@ -1,0 +1,67 @@
+
+<%- include('../partials/header'); %>
+
+
+
+  
+  <%# navigation bar section %>
+
+  <div class="container-fluid first-container" >  
+
+    <div class="row">
+      <nav class="navbar  navbar-light navbar-expand-lg " style="width: 100%;background-color: rgb(192,192,192)" >
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/page/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#allproducts">All products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products/products/latest">Latest Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Shop</a>
+            </li>
+          </ul>
+        </div>
+      </nav>    
+      
+    </div>    
+  </div>
+
+
+
+
+
+
+      <%#Rememeber to add the modal images here // tab gallery %>
+
+      <div class="col-lg-6">
+        <div class="container">
+              <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Thumbnail Gallery</h1>           
+                <hr class="mt-2 mb-5">
+                <div class="row text-center text-lg-left">
+                      <%gallery.forEach(function(gallery){%>
+                      <%if(gallery != 'thumbs') {%>
+                    <div class="col-lg-3 col-md-4 col-6">
+                      <a href="#" class="d-block mb-4 h-100">
+                            <img class="img-fluid img-thumbnail zoom" src="/productImage/<%=product.id%>/gallery/thumbs/<%=gallery%>"  alt="Mike" >
+                      </a>
+                    </div>        
+                  <% }%>
+              <% }) %> 
+           </div>         
+        </div> 
+    </div>
+    
+  
+ 
+
+
+<%- include('../partials/footer'); %>

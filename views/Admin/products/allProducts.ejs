@@ -1,0 +1,48 @@
+<%- include('../../partials/admin/header'); %>
+<%- include('../../partials/admin/navbar'); %>
+<%- include('../../partials/admin/sidenav'); %>           
+
+<%# this page shows the list of all products in tabular form %>
+  <p> this is the all properties page </p>
+
+  
+
+<% if(product == "") {%>
+	<h3 class = 'header' style="text-align: center;"> no products uploaded</h3>
+<%}%>
+
+<div class="row">
+	<% product.forEach(function(product) {%>
+		<div class="col-md-3 col-lg-4 " >
+			<div class="polaroid">	
+				  <div class="container">
+				 	 <p>Title: <%= product.title %></p> 				 	
+				  </div>
+				  <a href="/admin/show/product/<%=product.id%>"><img  style="height: 200px; width: 100%" src="/productImage/<%=product.id%>/<%=product.image%>"></a>
+				  <div class="container">
+				  	<div class="row" style="width: 100%">
+				  		<div class="col-lg-6">
+				  			 <p>price: <%- product.price %>  </p>
+				  		</div>
+				  		<div class="col-lg-6">
+				  			 <p>Category: <%- product.category %></p>
+				  		</div>		  		
+				  	</div>
+				 	
+				  </div>  
+			</div>
+		</div>
+	<%})%>	
+</div>
+
+  <!-- Page Content -->
+  
+
+  </div>
+
+      </div>
+    </main>
+  </div>
+</div>  
+
+  <%- include('../../partials/admin/footer'); %>

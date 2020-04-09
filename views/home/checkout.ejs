@@ -1,0 +1,51 @@
+<%- include('../partials/header'); %>
+	<div class="container-fluid">
+		<h3 class="header" style="text-align: center; margin: 10px">Checkout page: | total price is <%=total %></h3>
+		<div class="row">
+			<div class="col-lg-8 col-md-6 col-sm-4 col-xs-4">				
+				<form class="formCheck" action="/products/checkout/" method="post">			
+				  <div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label for="name">Name</label>
+				      <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+				    </div>
+				    <div class="form-group col-md-6">
+				      <label for="name">CardholderName</label>
+				      <input type="text" class="form-control" id="name"  placeholder="cardholder Name">
+				    </div>
+				  </div>			  
+				  <div class="form-group">
+				    <label for="inputAddress2">Address </label>
+				    <input type="text" class="form-control" id="inputAddress2" name="address" placeholder="Apartment, studio, or floor">
+				  </div>
+				  <div class="form-group">
+				    <label for="credit card number">Credit card number</label>
+				    <input type="text" class="form-control" placeholder="credit card number">
+				  </div>
+				  <div class="form-row">
+				    <div class="form-group col-md-4">
+				      <label for="expMonth">Expiration month</label>
+				      <input type="text" class="form-control" id="expiration month">
+				    </div>
+				   <div class="form-group col-md-4">
+				      <label for="expMonth">Expiration Year</label>
+				      <input type="text" class="form-control" id="expiration month">
+				    </div>
+				    <div class="form-group col-md-4">
+				      <label for="inputZip">cvc</label>
+				      <input type="text" class="form-control" id="inputZip">
+				    </div>
+				  </div>
+				  
+				  <button type="submit" class="btn btn-primary">Checkout</button>
+				</form>
+			</div>
+			
+		</div>
+		
+	</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/checkout.js"></script>
+
+ <%- include('../partials/footer'); %>

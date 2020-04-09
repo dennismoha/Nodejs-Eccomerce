@@ -1,0 +1,127 @@
+
+
+body {
+	/*background-color: rgb(220,220,220);*/
+	background-image: url('https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding: 0px 8px 8px 8px;
+	margin: 0px 5px;
+}
+
+div.top {
+	background-color: rgb(248,248,255);
+	margin-bottom: 10px;
+}
+
+div.first-container {
+	position: sticky;
+	top: 0;
+	 margin: 10px 0px;
+	 border: 1px solid rgb(220,220,220);
+	 background-color: rgb(220,220,220);
+	 border-radius: 4px;
+	  z-index: 1;
+}
+
+div.test {
+	/*background-color: rgb(220,220,220);*/
+	background-image: url('https://images.unsplash.com/photo-1490885578174-acda8905c2c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding: 0px 8px 8px 8px;
+	margin: 0px 5px;
+}
+
+div.test2 {
+	/*background-color: rgb(220,220,220);*/	
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding: 0px 8px 8px 8px;
+	margin: 0px 5px;
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.imgclass {
+	height:300px;
+	width: 100%;
+}
+
+.zoom {   
+  transition: transform .2s;  
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(2.5); 
+}
+
+.formCheck {
+	position: relative;
+	left:350px;
+	 border:3px solid blue;
+	 padding: 10px;
+	 border-radius: 12px
+}

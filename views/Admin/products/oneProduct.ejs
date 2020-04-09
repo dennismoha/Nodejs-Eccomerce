@@ -1,0 +1,50 @@
+<%- include('../../partials/admin/header'); %>
+<%- include('../../partials/admin/navbar'); %>
+<%- include('../../partials/admin/sidenav'); %>           
+
+<%# this page shows a single product by id and more details of the product %>
+  <h3 class="header">Title: <%= product.title %></h3>
+
+  <div class="row">
+	
+		<div class="col-md-3 col-lg-6 " style="position: relative;left: 220px; height: 100%;width: 100%" >
+			<div class="polaroid">	
+				  <div class="container">
+				 	 <p>Title: <%= product.title %></p> 
+				 	 <p>category:<%- product.category %></p>
+				  </div>
+				  <a href="/admin/show/product/<%=product.id%>"><img class="pimage" style="height: 300px; width: 100%;" src="/productImage/<%=product.id%>/<%=product.image%>"></a>
+				  <div class="container">
+				  	<div class="row" style="width: 100%">
+				  		<div class="col-lg-6">
+				  			 <p>price: <%- product.price %> | </p>
+				  		</div>
+				  		<div class="col-lg-6">
+				  			 <p>Quantity: <%- product.quantity %></p>
+				  		</div>		  		
+				  	</div>
+				 	 <p><%- product.description %></p>
+				  </div>				  	
+				  <a href="/admin/edit/product/<%=product.id%>" class="btn btn-success" style="margin-right:10px"> EDIT</a> 
+				  <a href="/admin/products/remove/<%= product.id%>" class="btn btn-danger" style="margin-left: 100px "> DELETE</a>	 
+			</div>
+
+		</div>	
+
+			
+		
+</div>
+
+
+
+
+
+
+  </div>
+
+      </div>
+    </main>
+  </div>
+</div>  
+
+  <%- include('../../partials/admin/footer'); %>

@@ -1,0 +1,36 @@
+<%- include('../partials/header'); %>
+
+
+	<%if (!products) {%>
+			<p> there are no products in the cart </p>
+	<%}else {%>
+
+
+<div class="container-fluid" style="margin: 10px">
+  <h3>products in cart</h3>
+  <p class="lead" style="text-align: center">the total amount is <b> <%=totalPrice%></b> </p>
+    <div class="row">
+      <div class="col-lg-12 " style=" background: rgba(76, 175, 80, 0.5)">
+      	  <%products.forEach(function(product) {%>
+          <div class="column" style="margin-top:10px">
+            <div class="card" style="margin: 10px">              	 
+              <a class="btn btn-success" target="_parent" href="/products/product/one/<%=product.item.category%>/<%=product.item.sep%>">
+                <img class="imgclass" src="/productImage/<%=product.id%>/<%=product.item.image%>"  alt="Mike" style="height:360px; width:100%;">
+              </a>
+              <div class="container">
+                <h2> </h2>
+                
+                <p class="title"><%= product.item.title %>  </p>  
+                <p>@price : <%= product.item.price %> :  quantity: <%= product.qty %> :  total price: <%= product.price %>   </p>        
+               <a href="/products/products/category/" class="button"> <p>view all products</p> </a>
+              </div>
+            </div>
+       </div>        
+    <%})%>           
+      </div> 
+    </div>    
+</div>
+	<a href="/products/checkout/" class="btn btn-success" style="position: relative;left: 450px">Checkout</a>	
+<%}%>
+ <%- include('../partials/footer'); %>
+	

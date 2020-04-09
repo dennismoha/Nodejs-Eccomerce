@@ -1,0 +1,29 @@
+<%- include('../partials/header'); %>
+
+<div class="container">
+  <div class="row">
+
+    <%orders.forEach(function(order){%>
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+
+          <h5 class="card-title">orders</h5>
+          <p class="card-text"><%order.items.forEach(function(order){%>
+                  <%= order.price %>
+         <% }) %></p>
+          <a href="#" class="btn btn-primary">price: <%= order.cart.totalPrice%></a>
+        </div>
+      </div>
+
+  <%})%>
+    
+    
+  </div>
+  
+</div>
+ 
+
+
+<%- include('../partials/footer'); %>
